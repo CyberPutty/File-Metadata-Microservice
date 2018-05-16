@@ -2,9 +2,16 @@
 // where your node app starts
 
 // init project
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const mongoose= require('mongoose');
+const multer= require('multer')
+const upload= multer({ dest: '/upload'});
 
+mongoose.connect(process.env.MONGO_URI);
+const schema= mongoose.Schema;
+
+const uploads= new schema({});
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
@@ -16,7 +23,11 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
+app.post("/upload",function(req,response){
+
+});
+
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
+const listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
