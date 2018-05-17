@@ -1,6 +1,6 @@
 #File Metadata Microservice
 =================
 
-simp
+simple app gets file metadata.
 
 
