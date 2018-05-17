@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 const mongoose= require('mongoose');
 const multer= require('multer')
-const upload= multer({ dest: '/uploads/'});
+const upload= multer({ dest: 'public/upload/'});
 
 mongoose.connect(process.env.MONGO_URI);
 const schema= mongoose.Schema;
@@ -23,7 +23,7 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.post("/upload",function(req,response){
+app.post("/upload",uploads(),function(req,response){
 
 });
 
