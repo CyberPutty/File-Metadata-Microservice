@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 const mongoose= require('mongoose');
 const multer= require('multer')
-const upload= multer({ dest: '/upload'});
+const upload= multer({ dest: '/uploads/'});
 
 mongoose.connect(process.env.MONGO_URI);
 const schema= mongoose.Schema;
