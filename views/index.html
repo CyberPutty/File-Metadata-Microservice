@@ -21,30 +21,13 @@
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <header>
-      <h1>
-        A Dream of the Future
-      </h1>
-    </header>
-
-    <main>
-      <p class="bold">Oh hi,</p>
-      
-      <p>Tell me your hopes and dreams:</p>
-      
-      <form>
-        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
-      
-      <section class="dreams">
-        <ul id="dreams"></ul>
-      </section>
-    </main>
-
-    <footer>
-      Made with <a href="https://glitch.com">Glitch</a>!
-    </footer>
+    
+    <h1>File MetaData Microservice</h1>
+    <p>submit a file to view file size</p>
+    <form action="/https://zany-letter.glitch.me/upload" method="post" enctype="multipart/form-data">
+  <input name="file" type="file">
+  <input type="submit">
+</form>
     
     
     <!-- import the webpage's client-side javascript file -->
@@ -52,7 +35,7 @@
 
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+  
     <script src="https://button.glitch.me/button.js"></script>
 
   </body>

@@ -23,7 +23,8 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.post("/upload",uploads(),function(req,response){
+app.post("/upload",function(request,response){
+  response.send("success");
 
 });
 
