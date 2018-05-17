@@ -25,8 +25,8 @@ app.get("/", function (request, response) {
 
 app.post("/uploads/new",upload.single("file"),function(request,response,next){
   console.log(request.file);
-  response.send("success");
-
+ //response.json({size :request.file.size+"kb"});
+  response.json(request.file)
 });
 
 // listen for requests :)
