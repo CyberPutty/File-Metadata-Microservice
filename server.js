@@ -8,10 +8,10 @@ const mongoose= require('mongoose');
 const multer= require('multer')
 const upload= multer({ dest: 'public/upload/'});
 
-mongoose.connect(process.env.MONGO_URI);
-const schema= mongoose.Schema;
+// mongoose.connect(process.env.MONGO_URI);
+// const schema= mongoose.Schema;
 
-const uploads= new schema({});
+// const uploads= new schema({});
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
@@ -23,7 +23,8 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.post("/upload",function(request,response){
+app.post("/upload",upload.single("image"),function(request,response,next){
+  console.log(request.file);
   response.send("success");
 
 });
